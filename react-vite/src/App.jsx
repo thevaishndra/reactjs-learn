@@ -1,10 +1,16 @@
 
 
+import June from "./june"
+
 function App() {
  
 
   return (
-    <h1>Hello React-Vite | Vaish</h1>
+    <>
+    <June/>
+    <h1>heat waves</h1>
+    <p>test para</p>
+    </>
   )
 }
 
