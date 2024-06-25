@@ -22,8 +22,17 @@ const ReactElement = {
 const anotherElement = (
     <a href="https:://google.com"></a>
 )
+
+const anotherUser = "The Beetles"
+
+const reactElement = React.createElement(
+    'a',//we can add any attributes
+    {href: 'https://google.com', target: '_blank'}, 'click me to visit google',
+    anotherUser//we can't write if else here as it is evaluated expression
+)
 ReactDOM.createRoot(document.getElementById('root')).render(
   
-    ReactElement
-  
+    // anotherElement //reactElement is not working because the way we created the syntax isn't right
+    reactElement
+//<App/>
 )
