@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  let [counter, setCounter] = useState(15);//bts -> let counter but using hook useState, so that ui also changes
+  const [counter, setCounter] = useState(15);//bts -> let counter but using hook useState, so that ui also changes
   // let counter = 15;//this will never get propagate in ui
 
   const addValue = () => {
@@ -12,7 +12,12 @@ function App() {
     // console.log("clicked", counter);//it does'nt get updated in counter problem is ui updation
     // counter = counter + 1;//it increments the value afterwards
     // setCounter(counter + 1)
-    setCounter(counter + 1);//now the ui changes, with updated value
+    // setCounter(counter + 1);//now the ui changes, with updated value
+    setCounter((prevCounter) => prevCounter + 1);//so, that it takes the previous value to update
+    setCounter((prevCounter) => prevCounter + 1);
+    setCounter((prevCounter) => prevCounter + 1);
+    setCounter((prevCounter) => prevCounter + 1);//the value is still the same as previous, it will increase by one only
+   //as they all are updating the same no. again and again, hence we retrieve previous counter value and add 1
   }
 
   const removeValue = () => {
