@@ -4,7 +4,7 @@ import { useTodo } from '../context/ToDoContext'
 function TodoItem({ todo }) {
     const [isTodoEditable, setIsTodoEditable] = useState(false)//State variable to track whether the Todo is editable
     const [todoMsg, setTodoMsg] = useState(todo.todo)//State variable to store the Todo message
-    const [updateTodo, deleteTodo, toggleComplete] =useTodo()// Custom hooks for updating, deleting, and toggling the completion of a Todo
+    const {updateTodo, deleteTodo, toggleComplete} = useTodo()// Custom hooks for updating, deleting, and toggling the completion of a Todo
 
 
 
