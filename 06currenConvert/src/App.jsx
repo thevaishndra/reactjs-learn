@@ -38,7 +38,7 @@ function App() {
 
         <div className='w-full mb-1'>
           <InputBox label="From" amount={amount} currencyOptions={options}
-          onCurrencyChange={(currency) => setAmount(amount)} selectCurrency={from} 
+          onCurrencyChange={(currency) => setFrom(currency)} selectCurrency={from} 
           onAmountChange={(amount) => setAmount(amount)} />
         </div>
 
@@ -51,7 +51,7 @@ function App() {
 
         <div className='w-full mt-1 mb-4'>
           <InputBox label="To" amount={convertedAmount} currencyOptions={options}
-          onCurrencyChange={(currency) => setTo(currency)} selectCurrency={from} amountDisable/>
+          onCurrencyChange={(currency) => setTo(currency)} selectCurrency={to} amountDisable/>
         </div>
 
         <button type='submit' className='w-full bg-blue-600 text-white px-4 py-3 rounded-lg'>
